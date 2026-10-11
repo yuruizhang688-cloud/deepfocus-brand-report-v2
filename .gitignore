@@ -1,0 +1,6 @@
+art/
+qa/
+work/
+*.tar.gz
+node_modules/
+.openai/
