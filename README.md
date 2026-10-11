@@ -7,9 +7,12 @@
 - 页面生成：`node build.mjs`，使用附带的 marked 17.0.5（MIT）
 - 本地预览：`python3 -m http.server 8766 --directory dist`
 - 可编辑样式和交互：`dist/assets/report.css`、`dist/assets/report.js`
-- 当前交付目标：GitHub 私有仓库；页面文件位于 `dist/`
+- 在线地址：https://yuruizhang688-cloud.github.io/deepfocus-brand-report-v2/
+- GitHub 仓库：https://github.com/yuruizhang688-cloud/deepfocus-brand-report-v2
+- GitHub Pages 从 `gh-pages` 分支根目录发布；该分支仅包含 `dist/` 的静态文件
 - 本地 Sites 项目标识保留在 `.openai/hosting.json`，不提交到 GitHub
-- 未开启 GitHub Pages，也未替换 DeepFocus 官网
+
+更新发布：运行 `node build.mjs`，提交并推送 `main`，然后运行 `git subtree split --prefix=dist -b gh-pages`，推送 `gh-pages`。已有本地 `gh-pages` 分支时可使用 `git subtree split --prefix=dist` 得到构建提交，再将该提交推送至远端 `gh-pages`。GitHub Pages 会自动构建发布。此站点独立于 DeepFocus 官网。
 
 样式遵循《DeepFocus 品牌 UI 规范 v1.0》（2026-10-11）的当前紫色版本：品牌紫 #4F39F6、近白画布 #FBFBFB、圆角按钮及卡片。字体为本地 Space Grotesk、MiSans、Geist Mono，无外部字体请求。Logo 继承当前线条图形路径，图文净间距为可见图形宽度的 0.16。标识源文件注明为近似矢量；印刷及注册应另行复核。
 
